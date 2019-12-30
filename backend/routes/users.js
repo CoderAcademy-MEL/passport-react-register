@@ -17,4 +17,8 @@ router.post('/login', express.json(), login, confirmLogin)
 
 router.post('/logout', logout)
 
+router.get('/hi', hasAuth, (req, res) => {
+  res.send('accessing!')
+})
+
 module.exports = router
